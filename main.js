@@ -157,8 +157,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             return;
         } */
 
-        if (!message.key.fromMe) incrementMessageCount(chatId, senderId);
-
+        
         // Check for bad words FIRST, before ANY other processing
         if (isGroup && userMessage) {
             await handleBadwordDetection(sock, chatId, message, userMessage, senderId);
